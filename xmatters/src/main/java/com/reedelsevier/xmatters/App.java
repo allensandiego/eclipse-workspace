@@ -122,7 +122,8 @@ public class App
 			
 			for (int i = 0; i < Jdata.length(); i++) {
 				JSONObject Dobject = Jdata.getJSONObject(i);
-				JSONArray Dmembers = Dobject.getJSONArray("members");
+				JSONObject member = Dobject.getJSONArray("members");
+				JSONArray Dmembers = Dobject.getJSONArray("data");
 
 				for (int j = 0; j < Dmembers.length(); j++) {
 					JSONObject Mobject = Dmembers.getJSONObject(j);
